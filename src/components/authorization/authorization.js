@@ -1,9 +1,13 @@
 import PlatformIcon from '../../assets/icons/platform-icon.svg';
 import AuthorizationIcon from '../../assets/icons/authorization-page-icon.svg';
 import LogIn from './log-in/log-in';
-
-
 import '../authorization/authorization.css';
+
+import RegistrationForm from './registration/components/registration-form/registration-form';
+import RegistrationVerify from './registration/components/registration-verify/registration-verify';
+import ForgotPassForm from './forgot-password/components/forgot-pass-form/forgot-pass-form';
+import ForgotPassVerify from './forgot-password/components/forgot-pass-verify/forgot-pass-verify';
+import NewPassword from './forgot-password/components/new-password/new-password';
 
 
 export default function Authorization() {
@@ -20,7 +24,7 @@ export default function Authorization() {
                     </div>
                 </div>
                 <div class='authorization-content'>
-                    <LogIn/>
+                    <NewPassword/>
                 </div>
             </div>
         </>

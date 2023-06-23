@@ -1,0 +1,10 @@
+.resend-email {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 12px;
+}
+
+.resend-email > .form-label {
+    color: #828387;
+}

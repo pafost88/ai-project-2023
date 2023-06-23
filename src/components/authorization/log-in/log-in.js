@@ -24,7 +24,10 @@ export default function LogIn() {
                         </InputGroup>
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                    <Form.Label className='light-label'>Password</Form.Label>
+                    <div className='password-labels'>
+                        <Form.Label className='light-label'>Password</Form.Label>
+                        <Form.Label><a href='/' className='green-label'>Forgot password?</a></Form.Label>
+                    </div>
                     <InputGroup className="mb-3 w-90">
                             <InputGroup.Text><img src={PasswordIcon} alt=''></img></InputGroup.Text>
                             <Form.Control

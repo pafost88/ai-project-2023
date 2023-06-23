@@ -1,0 +1,16 @@
+.name-input {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.remember-pass {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.remember-pass > .terms-label {
+    color: #828387;
+}

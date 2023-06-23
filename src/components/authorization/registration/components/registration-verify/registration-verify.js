@@ -1,0 +1,24 @@
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
+
+export default function RegistrationVerify() {
+    return (
+        <>
+            <div class='form-label'>
+                <span class='header-label'>Verify your email</span>
+                <span class='label-description'></span>
+            </div>
+            <div class='form-input'>
+                <Form data-bs-theme="dark">
+                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                        <Form.Control type="text"/>
+                    </Form.Group>
+                </Form>
+            </div>
+            <div className='verify-buttons'>
+                <Button variant="dark" className='w-20'>Go to Log In</Button>
+                <Button variant="success" className='w-20'>Open Email app</Button>
+            </div>
+        </>
+    );
+}

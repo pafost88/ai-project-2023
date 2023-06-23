@@ -35,3 +35,13 @@
 .form-input, .form-buttons {
     width: 100%;
 }
+
+.password-labels {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.green-label {
+    color: #41B870;
+}
