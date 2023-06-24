@@ -124,6 +124,12 @@
     border-radius: 0;
 }
 
-.input-line:focus {
+.mb-3 > .input-line:focus {
     box-shadow: none !important;
+    border-color: #41B870;
+}
+
+input:focus {
+    box-shadow:0 0 0 0.15rem rgba(65, 184, 112,.25) !important;
+    border-color: #41B870 !important;
 }
