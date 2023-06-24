@@ -27,8 +27,8 @@ export default function RegistrationForm() {
                 </Form>
             </div>
             <div className='verify-buttons'>
-                <Button variant="dark" className='w-20'>Go to Log In</Button>
-                <Button variant="success" className='w-20'>Reset password</Button>
+                <a href='/'><Button variant="dark" className='w-20'>Go to Log In</Button></a>
+                <a href='/forgot-password-verify'><Button variant="success" className='w-20'>Reset password</Button></a>
             </div>
         </>
     );

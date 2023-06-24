@@ -1,4 +1,3 @@
-import './log-in.css'
 import { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
@@ -38,7 +37,7 @@ export default function LogIn() {
                     <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
                         <div className='password-labels'>
                             <Form.Label className='light-label'>Password</Form.Label>
-                            <Form.Label><a href='/' className='green-label'>Forgot password?</a></Form.Label>
+                            <Form.Label><a href='/forgot-password' className='green-label'>Forgot password?</a></Form.Label>
                         </div>
                         <InputGroup className="mb-3 w-90">
                             <InputGroup.Text className='transparent-background'><img src={PasswordIcon} alt=''></img></InputGroup.Text>
@@ -63,7 +62,7 @@ export default function LogIn() {
             </div>
 
             <div>
-                <Form.Label class='terms-label'><span>Don’t have account yet? <a className='green-label' href='/'>Create Account <img src={ArrowRight} alt=''></img></a></span></Form.Label>
+                <Form.Label class='terms-label'><span>Don’t have account yet? <a className='green-label' href='/registration'>Create Account <img src={ArrowRight} alt=''></img></a></span></Form.Label>
             </div>
         </>
     );

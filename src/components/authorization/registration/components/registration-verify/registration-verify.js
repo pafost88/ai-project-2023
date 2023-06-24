@@ -16,7 +16,7 @@ export default function RegistrationVerify() {
                 </Form>
             </div>
             <div className='verify-buttons'>
-                <Button variant="dark" className='w-20'>Go to Log In</Button>
+                <a href='/'><Button variant="dark" className='w-20'>Go to Log In</Button></a>
                 <Button variant="success" className='w-20'>Open Email app</Button>
             </div>
         </>

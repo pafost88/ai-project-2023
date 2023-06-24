@@ -72,7 +72,7 @@ export default function RegistrationForm() {
             </div>
 
             <div className='form-buttons'>
-                <Button variant="success" className='w-100'>Sing Up</Button>
+                <a href='/registration-verify'><Button variant="success" className='w-100'>Sing Up</Button></a>
             </div>
 
             <div>

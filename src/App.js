@@ -1,4 +1,6 @@
 import React from 'react';
+import AuthorizationRouter from './components/authorization/authorization';
+
 //import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
 
@@ -12,7 +14,8 @@ import React from 'react';
 //import Header from './components/header/Header';
 //import Footer from './components/footer/Footer';
 
-import Authorization from './components/authorization/authorization.js';
+
+
 
 
 
@@ -20,9 +23,7 @@ import Authorization from './components/authorization/authorization.js';
 
 function App() {
   return (
-    <>
-      <Authorization/>
-    </>
+   <AuthorizationRouter />
   )
 }
 
