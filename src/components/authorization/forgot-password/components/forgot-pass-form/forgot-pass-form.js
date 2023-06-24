@@ -17,8 +17,9 @@ export default function RegistrationForm() {
                     <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                         <Form.Label className='light-label'>Email Address</Form.Label>
                         <InputGroup className="mb-3 w-90">
-                            <InputGroup.Text><img src={EmailIcon} alt=''></img></InputGroup.Text>
+                            <InputGroup.Text className='transparent-background'><img src={EmailIcon} alt=''></img></InputGroup.Text>
                             <Form.Control
+                                className='transparent-background'
                                 placeholder="Email Address"
                             />
                         </InputGroup>

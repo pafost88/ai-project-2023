@@ -96,6 +96,7 @@
 
 .green-label {
     color: #41B870;
+    text-decoration: none;
 }
 
 .user-email {
@@ -106,4 +107,23 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+}
+
+.show-pass:hover {
+    cursor: pointer;
+}
+
+.transparent-background {
+    background-color: transparent !important;
+}
+
+.mb-3 > .input-line {
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-radius: 0;
+}
+
+.input-line:focus {
+    box-shadow: none !important;
 }

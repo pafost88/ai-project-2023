@@ -6,5 +6,6 @@
 }
 
 .resend-email > .form-label {
+    margin-bottom: 30px;
     color: #828387;
 }
