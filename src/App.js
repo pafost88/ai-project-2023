@@ -1,5 +1,7 @@
 import React from 'react';
 import AuthorizationRouter from './components/authorization/authorization';
+import UserSettingsRouter from './components/user-settings/user-settings';
+import { BrowserRouter } from 'react-router-dom';
 
 //import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
@@ -23,7 +25,10 @@ import AuthorizationRouter from './components/authorization/authorization';
 
 function App() {
   return (
-   <AuthorizationRouter />
+    <BrowserRouter>
+      <AuthorizationRouter />
+      <UserSettingsRouter />
+    </BrowserRouter>
   )
 }
 

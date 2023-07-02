@@ -8,11 +8,11 @@ import EmailIcon from '../../../../../assets/icons/email-icon.svg';
 export default function RegistrationForm() {
     return (
         <>
-            <div class='form-label'>
-                <span class='header-label'>Forgot Password?</span>
-                <span class='label-description'>No worries, we’ll send you verification code to reset password</span>
+            <div className='form-label'>
+                <span className='header-label'>Forgot Password?</span>
+                <span className='label-description'>No worries, we’ll send you verification code to reset password</span>
             </div>
-            <div class='form-input'>
+            <div className='form-input'>
                 <Form data-bs-theme="dark">
                     <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                         <Form.Label className='light-label'>Email Address</Form.Label>

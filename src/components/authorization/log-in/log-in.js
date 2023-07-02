@@ -18,11 +18,11 @@ export default function LogIn() {
       };
     return (
         <>
-            <div class='form-label'>
-                <span class='header-label'>Welcome Back!</span>
-                <span class='label-description'>We are glad to see you again at Businex. Log in to continue.</span>
+            <div className='form-label'>
+                <span className='header-label'>Welcome Back!</span>
+                <span className='label-description'>We are glad to see you again at Businex. Log in to continue.</span>
             </div>
-            <div class='form-input'>
+            <div className='form-input'>
                 <Form data-bs-theme="dark">
                     <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                         <Form.Label className='light-label'>Username or Email Address</Form.Label>
@@ -62,7 +62,7 @@ export default function LogIn() {
             </div>
 
             <div>
-                <Form.Label class='terms-label'><span>Don’t have account yet? <a className='green-label' href='/registration'>Create Account <img src={ArrowRight} alt=''></img></a></span></Form.Label>
+                <Form.Label className='terms-label'><span>Don’t have account yet? <a className='green-label' href='/registration'>Create Account <img src={ArrowRight} alt=''></img></a></span></Form.Label>
             </div>
         </>
     );

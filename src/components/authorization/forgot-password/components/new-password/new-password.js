@@ -18,10 +18,10 @@ export default function NewPassword() {
 
     return (
         <>
-            <div class='form-label'>
-                <span class='header-label'>Set new password</span>
+            <div className='form-label'>
+                <span className='header-label'>Set new password</span>
             </div>
-            <div class='form-input'>
+            <div className='form-input'>
                 <Form data-bs-theme="dark">
                     <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
                         <InputGroup className="mb-3 w-90">

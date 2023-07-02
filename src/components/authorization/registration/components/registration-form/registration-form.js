@@ -21,11 +21,11 @@ export default function RegistrationForm() {
       };
     return (
         <>
-            <div class='form-label'>
-                <span class='header-label'>Set up your Account</span>
-                <span class='label-description'>You have been invited to join Businex. Fill out your details below.</span>
+            <div className='form-label'>
+                <span className='header-label'>Set up your Account</span>
+                <span className='label-description'>You have been invited to join Businex. Fill out your details below.</span>
             </div>
-            <div class='form-input'>
+            <div className='form-input'>
                 <Form data-bs-theme="dark">
                     <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                         <Form.Control className='transparent-background' type="text" placeholder="Username" />
@@ -67,7 +67,7 @@ export default function RegistrationForm() {
                 </Form>
                 <Form.Group className="mb-3 remember-pass">
                     <Form.Check data-bs-theme="dark" className='label-description'/>
-                    <Form.Label class='terms-label'><span>I agree with Businex <a className='green-label' href='/'>Terms and Policy.</a></span></Form.Label>
+                    <Form.Label className='terms-label'><span>I agree with Businex <a className='green-label' href='/'>Terms and Policy.</a></span></Form.Label>
                 </Form.Group>
             </div>
 
@@ -76,7 +76,7 @@ export default function RegistrationForm() {
             </div>
 
             <div>
-                <Form.Label class='terms-label'><span>Already have an account? <a className='green-label' href='/'>Log In <img src={ArrowRight} alt=''></img></a></span></Form.Label>
+                <Form.Label className='terms-label'><span>Already have an account? <a className='green-label' href='/'>Log In <img src={ArrowRight} alt=''></img></a></span></Form.Label>
             </div>
         </>
     );

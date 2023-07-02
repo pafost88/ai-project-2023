@@ -3,7 +3,7 @@ import { Outlet, BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import PlatformIcon from '../../assets/icons/platform-icon.svg';
 import AuthorizationIcon from '../../assets/icons/authorization-page-icon.svg';
-import '../authorization/authorization.css';
+import './authorization.css';
 
 import LogIn from './log-in/log-in';
 import RegistrationForm from './registration/components/registration-form/registration-form';
@@ -18,17 +18,17 @@ export default function AuthorizationRouter() {
     const Layout = () => {
         return (
             <>
-                <div class='authorization'>
-                    <div class='logo-section'>
-                        <div class='platform-header'>
+                <div className='authorization'>
+                    <div className='logo-section'>
+                        <div className='platform-header'>
                             <img src={PlatformIcon} alt=''></img>
                             <span>Profile logo</span>
                         </div>
-                        <div class='authorization-image'>
+                        <div className='authorization-image'>
                             <img src={AuthorizationIcon} alt=''></img>
                         </div>
                     </div>
-                    <div class='authorization-content'>
+                    <div className='authorization-content'>
                         <Outlet />
                     </div>
                 </div>
@@ -38,26 +38,24 @@ export default function AuthorizationRouter() {
 
     const AuthorizationRoutes = () => {
         return (
-            <BrowserRouter>
-                <Routes>
-                    <Route path='/' element={<Layout />}>
-                        <Route path='/' element={<LogIn />} />
-                        <Route path="/registration" element={<RegistrationForm />} />
-                        <Route path="/registration-verify" element={<RegistrationVerify />} />
+            <Routes>
+                <Route path='/' element={<Layout />}>
+                    <Route path='/' element={<LogIn />} />
+                    <Route path="/registration" element={<RegistrationForm />} />
+                    <Route path="/registration-verify" element={<RegistrationVerify />} />
 
-                        <Route path="/forgot-password" element={<ForgotPassForm />} />
-                        <Route path="/forgot-password-verify" element={<ForgotPassVerify />} />
+                    <Route path="/forgot-password" element={<ForgotPassForm />} />
+                    <Route path="/forgot-password-verify" element={<ForgotPassVerify />} />
 
-                        <Route path="/new-password" element={<NewPassword />} />
-                    </Route>
-                </Routes>
-            </BrowserRouter>
+                    <Route path="/new-password" element={<NewPassword />} />
+                </Route>
+            </Routes>
         )
     }
 
 
     return (
-        <AuthorizationRoutes/>
+        <AuthorizationRoutes />
     )
 
 }
