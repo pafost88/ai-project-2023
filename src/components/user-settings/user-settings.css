@@ -2,7 +2,7 @@
     height: 100%;
     display: flex;
     flex-direction: row;
-    background: #0C0C0D;
+    background: #1D1E1F;
 }
 
 .settings-page>.menu-section {
@@ -33,18 +33,7 @@
     background: var(--action-light, rgba(232, 252, 253, 0.05));
 }
 
-.menu-header>span {
-    color: var(--text-primary, #E5E5E6);
-    /* Headline/H6 */
-    font-size: 20px;
-    font-family: Inter;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 28px;
-    letter-spacing: -0.336px;
-}
-
-.profile-info {
+.profile-menu-info {
     display: flex;
     padding: 8px;
     align-items: flex-start;
@@ -57,7 +46,7 @@
     box-shadow: 0px 5px 4px -4px rgba(0, 0, 0, 0.02), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
 }
 
-.profile-info>.profile-inner {
+.profile-menu-info>.profile-menu-inner {
     display: flex;
     align-items: center;
     gap: 12px;
@@ -72,28 +61,6 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-}
-
-.user-names>.bold-body-2 {
-    color: var(--text-primary, #E5E5E6);
-
-    /* Body 2/Bold */
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 22px;
-    letter-spacing: -0.128px;
-}
-
-.user-names>.caption-regular {
-    color: var(--text-secondary, #828387);
-
-    /* Caption/Regular */
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 450;
-    line-height: 18px;
-    letter-spacing: 0.016px;
 }
 
 .menu-items {
@@ -116,18 +83,6 @@
     align-items: center;
 }
 
-.menu-nav>span {
-    color: var(--text-secondary, #828387);
-    /* Overline/Regular */
-    font-size: 11px;
-    font-family: Inter;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 12px;
-    letter-spacing: 0.4px;
-    text-transform: uppercase;
-}
-
 .menu-items-inner>.menu-content {
     display: flex;
     flex-direction: column;
@@ -148,4 +103,12 @@
     font-weight: 550;
     line-height: 22px;
     letter-spacing: -0.128px;
+}
+
+.inner-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1 0 0;
+    align-self: stretch;
 }

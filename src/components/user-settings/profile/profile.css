@@ -1,0 +1,77 @@
+.profile-inner {
+    display: flex;
+    padding: 80px 212px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.profile-inner>.profile-card {
+    display: flex;
+    width: 640px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 16px 16px 40px;
+
+    border-radius: 12px;
+    border: 1px solid var(--border-light, #2C2C2E);
+    background: var(--background-surface, #171819);
+    /* Elevation/xs */
+    box-shadow: 0px 5px 4px -4px rgba(0, 0, 0, 0.02), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
+}
+
+.profile-card>.card-header {
+    display: flex;
+    padding-bottom: 0px;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+}
+
+.profile-card>.card-content {
+    display: flex;
+    padding: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+}
+
+.card-content>.form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+}
+
+.form-header>.header-buttons {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.disabled-input {
+    border: 1px solid var(--border-disabled, #262626) !important;
+    background: var(--action-disabled, rgba(255, 255, 255, 0.06)) !important;
+    /* Elevation/xs */
+    box-shadow: 0px 5px 4px -4px rgba(0, 0, 0, 0.02), 0px 1px 2px 0px rgba(0, 0, 0, 0.06) !important;
+}
+
+
+.disabled-label {
+    color: #525252;
+}
+
+.delete-button {
+    border: 0;
+    background-color: none;
+}
+
+.transparent-background-button {
+    border: 0;
+    color: #828387;
+}
+
+.transparent-background {
+    color: red;
+}

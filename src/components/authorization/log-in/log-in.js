@@ -1,21 +1,15 @@
-import { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
-import EmailIcon from '../../../assets/icons/email-icon.svg';
-import PasswordIcon from '../../../assets/icons/password-icon.svg';
-import ArrowRight from '../../../assets/icons/arrow-right-green.svg';
-import PasswordShow from '../../../assets/icons/password-show.svg';
-
 import Button from 'react-bootstrap/Button';
 
-export default function LogIn() {
-    const [passwordShown, setPasswordShown] = useState(false);
+import PasswordField from '../../../assets/overrides/password-field/password-field';
 
-    const togglePassword = () => {
-        // When the handler is invoked
-        // inverse the boolean state of passwordShown
-        setPasswordShown(!passwordShown);
-      };
+import EmailIcon from '../../../assets/icons/email-icon.svg';
+import ArrowRight from '../../../assets/icons/arrow-right-green.svg';
+
+
+export default function LogIn() {
+    
     return (
         <>
             <div className='form-label'>
@@ -39,15 +33,7 @@ export default function LogIn() {
                             <Form.Label className='light-label'>Password</Form.Label>
                             <Form.Label><a href='/forgot-password' className='green-label'>Forgot password?</a></Form.Label>
                         </div>
-                        <InputGroup className="mb-3 w-90">
-                            <InputGroup.Text className='transparent-background'><img src={PasswordIcon} alt=''></img></InputGroup.Text>
-                            <Form.Control
-                                className='transparent-background'
-                                type={passwordShown ? 'text' : 'password'}
-                                placeholder="Password"
-                            />
-                            <InputGroup.Text className='show-pass transparent-background'><img onClick={togglePassword} src={PasswordShow} alt=''></img></InputGroup.Text>
-                        </InputGroup>
+                        <PasswordField placeholder="Password" />
                     </Form.Group>
                 </Form>
                 <div className='remember-pass'>

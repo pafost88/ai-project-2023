@@ -1,9 +1,11 @@
-import { Outlet, BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Outlet, Routes, Route } from 'react-router-dom';
 
 
 import PlatformIcon from '../../assets/icons/platform-icon.svg';
 import AuthorizationIcon from '../../assets/icons/authorization-page-icon.svg';
+
 import './authorization.css';
+import '../../assets/styles/main.css'
 
 import LogIn from './log-in/log-in';
 import RegistrationForm from './registration/components/registration-form/registration-form';
