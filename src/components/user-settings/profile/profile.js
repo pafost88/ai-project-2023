@@ -1,7 +1,6 @@
 import './profile.css';
 import '../../../assets/styles/main.css';
 import EmailIcon from '../../../assets/icons/email-icon.svg';
-import ProfileAvatar from '../../../assets/avatars/Base.jpg';
 
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
@@ -17,7 +16,7 @@ export default function ProfileAccount() {
                 </div>
                 <div className="card-content">
                     <div className='form-header'>
-                        <img scr={ProfileAvatar} alt=''></img>
+                        <span className="avatar-img"></span>
                         <div className='header-buttons'>
                             <Button variant="dark" className='w-20 transparent-background-button '>Delete</Button>
                             <Button variant="dark" className='w-20 transparent-background-button '><span className='green-label'>Update</span></Button>
@@ -30,11 +29,11 @@ export default function ProfileAccount() {
                                 <Form.Control className='disabled-input' type="text" placeholder="Nazarverhun" disabled />
                             </Form.Group>
                             <InputGroup className="mb-3 name-input">
-                                <Form.Group>
+                                <Form.Group className="name-field">
                                     <Form.Label className='button-medium-bold'>Username</Form.Label>
                                     <Form.Control className='transparent-background' placeholder="First name" />
                                 </Form.Group>
-                                <Form.Group>
+                                <Form.Group className="name-field">
                                     <Form.Label className='button-medium-bold'>Username</Form.Label>
                                     <Form.Control className='transparent-background' placeholder="Last name" />
                                 </Form.Group>
@@ -58,9 +57,11 @@ export default function ProfileAccount() {
                             </Form.Group>
                         </Form>
                     </div>
-                    <div className='form-actions'></div>
+                    <div className='form-actions'>
+                        <Button variant="dark" className='w-20'>Discard</Button>
+                        <Button variant="success" className='w-30'>Save Changes</Button>
+                    </div>
                 </div>
-                <div className="card-footer"></div>
             </div>
         </div>
     )

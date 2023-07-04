@@ -1,0 +1,9 @@
+.footer {
+    display: flex;
+    padding: 40px 212px;
+    align-items: flex-start;
+}
+
+.footer>.footer-link {
+    text-decoration: none;
+}

@@ -22,6 +22,7 @@
 
 .profile-card>.card-header {
     display: flex;
+    width: 100%;
     padding-bottom: 0px;
     flex-direction: column;
     align-items: flex-start;
@@ -30,7 +31,7 @@
 
 .profile-card>.card-content {
     display: flex;
-    padding: 24px;
+    width: 100%;
     flex-direction: column;
     align-items: flex-start;
     gap: 24px;
@@ -39,6 +40,8 @@
 
 .card-content>.form-header {
     display: flex;
+    width: 100%;
+    padding-top: 42px;
     justify-content: space-between;
     align-items: center;
     align-self: stretch;
@@ -48,6 +51,41 @@
     display: flex;
     align-items: flex-start;
     gap: 16px;
+}
+
+.card-content>.form-content {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+}
+
+.form-content>.form-inner {
+    width: 100%;
+}
+
+.form-inner>.name-input {
+    display: flex;
+    justify-content: space-between;
+}
+
+.name-input>.name-field{
+    width: 48%;
+}
+
+.card-content>.form-actions{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.avatar-img {
+    width: 64px;
+    height: 64px;
+    background-image: url('/public/avatars/profile-avatar.png');
 }
 
 .disabled-input {
@@ -67,9 +105,10 @@
     background-color: none;
 }
 
-.transparent-background-button {
+.header-buttons>.transparent-background-button {
     border: 0;
     color: #828387;
+    background-color: transparent;
 }
 
 .transparent-background {

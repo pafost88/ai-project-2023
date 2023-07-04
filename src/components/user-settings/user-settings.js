@@ -3,11 +3,11 @@ import { Outlet, Routes, Route } from 'react-router-dom';
 import './user-settings.css';
 import '../../assets/styles/main.css';
 import ArrowLeft from '../../assets/icons/arrow-left-dark.svg';
-import ProfileAvatar from '../../assets/avatars/Base.jpg';
 
 import Profile from './profile/profile';
 import Security from './security/security';
 import Billing from './billing/billing';
+import Footer from '../core/footer/footer';
 
 
 export default function UserSettingsRouter() {
@@ -22,9 +22,7 @@ export default function UserSettingsRouter() {
                         </div>
                         <div className='profile-menu-info'>
                             <div className='profile-menu-inner'>
-                                <div className='profile-avatar'>
-                                    <img scr={ProfileAvatar} alt=''></img>
-                                </div>
+                                <span className='menu-avatar'></span>
                                 <div className='user-names'>
                                     <span className='bold-body-2'>Kianna Press</span>
                                     <span className='caption-regular'>@kianna</span>
@@ -46,6 +44,7 @@ export default function UserSettingsRouter() {
                     </div>
                     <div className='inner-content'>
                         <Outlet />
+                        <Footer />
                     </div>
                 </div>
             </>

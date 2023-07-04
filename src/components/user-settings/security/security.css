@@ -1,0 +1,48 @@
+.security-inner {
+    display: flex;
+    padding: 80px 212px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.security-card {
+    display: flex;
+    width: 640px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 16px 16px 40px;
+
+    border-radius: 12px;
+    border: 1px solid var(--border-light, #2C2C2E);
+    background: var(--background-surface, #171819);
+    /* Elevation/xs */
+    box-shadow: 0px 5px 4px -4px rgba(0, 0, 0, 0.02), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
+}
+
+.security-card>.card-header {
+    display: flex;
+    width: 100%;
+    padding-bottom: 0px;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+}
+
+.security-card>.card-content {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+}
+
+.card-content>.form-content {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+}
