@@ -12,5 +12,24 @@
 }
 
 .terms-label {
+    padding: 10px 0;
     color: #828387;
+}
+
+.no-valid {
+    font-weight: bold;
+    color: red;
+}
+
+.input-group {
+    padding: 10px 0;
+}
+
+.validation-error{
+    padding-top: -5px;
+}
+
+.password-container{
+    display: flex;
+    flex-direction: column;
 }
