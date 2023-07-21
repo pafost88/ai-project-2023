@@ -26,8 +26,10 @@ export default function AuthorizationRouter() {
                             <img src={PlatformIcon} alt=''></img>
                             <span>Profile logo</span>
                         </div>
-                        <div className='authorization-image'>
-                            <img src={AuthorizationIcon} alt=''></img>
+                        <div className='image-container'>
+                            <div className='authorization-image'>
+                                <img src={AuthorizationIcon} alt=''></img>
+                            </div>
                         </div>
                     </div>
                     <div className='authorization-content'>

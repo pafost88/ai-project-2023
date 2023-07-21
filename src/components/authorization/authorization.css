@@ -10,7 +10,6 @@
     width: 60%;
     display: flex;
     flex-direction: column;
-    gap: 200px;
 }
 
 .platform-header {
@@ -21,7 +20,14 @@
     float: left;
 }
 
-.authorization-image {
+.image-container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container > .authorization-image {
     display: flex;
     justify-content: center;
 }

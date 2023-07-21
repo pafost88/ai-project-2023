@@ -85,37 +85,18 @@ class LogIn extends Component {
             };
 
             axios.post("http://3.75.93.196:8000/login-user", body).then((response) => {
+                if(response.status === 200){
+                    alert("Log In success")
+                }
+                else {
+                    alert("Credentials bad")
+                }
                 console.log(response);
             });
         }
     }
 
-    getUsers() {
-        axios
-            .get('http://3.75.93.196:8000/users')
-            .then((response) => {
-                this.setState({ users: response.data })
-                console.log(response.data);
-            })
-            .catch((error) => {
-                console.log(error);
-            });;
-    }
-
-    async getAllUsers() {
-
-        try {
-            const response = await axios.get('http://3.75.93.196:8000/users');
-            return response.data;
-        } catch (error) {
-            return [];
-        }
-
-    }
-
     render() {
-        const users = this.getAllUsers();
-        console.log(users);
         return (
             <>
                 <div className='form-label'>

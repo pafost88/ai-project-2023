@@ -11,6 +11,7 @@ import EmailIcon from '../../../../../assets/icons/email-icon.svg';
 import ArrowRight from '../../../../../assets/icons/arrow-right-green.svg';
 import { Component } from 'react';
 import axios from 'axios';
+import { Redirect } from 'react-router-dom'
 
 class RegistrationForm extends Component {
     constructor(props) {
@@ -25,6 +26,7 @@ class RegistrationForm extends Component {
                 "confirm-password": ""
             }
         }
+        this.history = {};
         this.createUser = this.createUser.bind(this);
         this.handleChange = this.handleChange.bind(this);
     }
@@ -45,7 +47,6 @@ class RegistrationForm extends Component {
         let input = this.state.input;
         let errors = {};
         let isValid = true;
-
         if (input["password"].length < 8) {
             isValid = false;
             errors["password"] = 'Password is too short!'
@@ -69,7 +70,7 @@ class RegistrationForm extends Component {
         })
     }
 
-    createUser(event) {
+    async createUser(event) {
         event.preventDefault();
         const data = new FormData(event.target);
 
@@ -78,20 +79,20 @@ class RegistrationForm extends Component {
             input["password"] = "";
             input["confirm-password"] = "";
             this.setState({ input: input });
-            
+
             const body = {
                 "first_name": data.get('first-name'),
                 "last_name": data.get('last-name'),
                 "email": data.get('email'),
                 "password": data.get('password'),
                 "confirm_password": data.get('confirm-password'),
-              }
+            }
 
-              axios.post("http://3.75.93.196:8000/users", body).then((response) => {
+            await axios.post("http://3.75.93.196:8000/users", body).then((response) => {
                 console.log(response);
-              })
+            });
+            window.location.href = '/';
 
-            console.log(data.get('email')); // Reference by form input's `name` tag
         }
 
 
