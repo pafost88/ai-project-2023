@@ -9,6 +9,7 @@ h4,
 h5,
 h6,
 .primary-text {
+    font-family: 'Inter';
     color: var(--text-primary, #E5E5E6);
 }
 
@@ -30,6 +31,7 @@ h6,
 }
 
 .button-medium-bold {
+    font-family: 'Inter';
     font-size: 14px;
     font-style: normal;
     font-weight: 600;
@@ -49,7 +51,7 @@ input:focus {
 
 .regular-body-1 {
     font-size: 16px;
-    font-family: Inter;
+    font-family: 'Inter';
     font-style: normal;
     font-weight: 450;
     line-height: 26px;
@@ -57,6 +59,7 @@ input:focus {
 }
 
 .bold-body-2 {
+    font-family: 'Inter';
     font-size: 14px;
     font-style: normal;
     font-weight: 600;
@@ -64,8 +67,28 @@ input:focus {
     letter-spacing: -0.128px;
 }
 
+.medium-body-2{
+    font-family: 'Inter';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 550;
+    line-height: 22px; /* 157.143% */
+    letter-spacing: -0.128px;
+}
+
 /* Header */
+.headline-h5 {
+    color: #E5E5E6;
+    font-family: 'Inter';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px; /* 133.333% */
+    letter-spacing: -0.464px;
+}
+
 .headline-h6 {
+    font-family: 'Inter';
     font-size: 20px;
     font-style: normal;
     font-weight: 600;
@@ -74,6 +97,7 @@ input:focus {
 }
 
 .subheadline-sh1-bold {
+    font-family: 'Inter';
     font-size: 18px;
     font-family: Inter;
     font-style: normal;
@@ -85,7 +109,7 @@ input:focus {
 /* Regular */
 .caption-regular {
     color: var(--text-secondary, #828387);
-
+    font-family: 'Inter';
     font-size: 12px;
     font-style: normal;
     font-weight: 450;

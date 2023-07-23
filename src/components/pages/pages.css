@@ -1,0 +1,132 @@
+#root>.app {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    background: #1D1E1F !important;
+}
+
+.app-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 15%;
+    background: #171819;
+    padding: 24px 16px;
+    align-items: flex-start;
+    flex-shrink: 0;
+    align-self: stretch;
+    height: 100%;
+}
+
+.menu-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.app-menu > .menu-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 17px;
+    float: left;
+    width: 100%;
+}
+
+.menu-header >span {
+    color: #D0D5DD;
+    font-size: 14px;
+    font-family: 'Inter';
+    font-weight: 500;
+}
+
+.search {
+    border: 1px solid #2C2C2E!important;
+    background: #171819!important;
+}
+
+.menu-items {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+
+}
+
+.menu-items>.menu-item {
+    display: flex;
+    height: 24px;
+    align-items: center;
+    gap: 8px;
+    padding: 24px 8px;
+    color: #E5E5E6;
+    font-family: 'Inter';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 550;
+    line-height: 22px;
+    width: 100%;
+}
+
+.extra-help {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    padding: 10px;
+}
+
+.item-header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.profile-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    width: 100%;
+}
+
+.profile-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 12px;
+}
+
+.user-names {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.no-border {
+    border: none;
+}
+
+.page-content{
+    width: 85%;
+    height: 100%;
+    background: #1D1E1F;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1 0 0;
+    padding: 32px 80px;
+}
