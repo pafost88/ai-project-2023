@@ -1,5 +1,4 @@
 import {Outlet, Route, Routes} from "react-router-dom";
-import Work from "./work/work";
 import PlatformIcon from "../../assets/icons/platform-icon.svg";
 
 import './pages.css'
@@ -14,6 +13,8 @@ import More from '../../assets/icons/more-vertical.svg';
 import ExtraHelp from '../../assets/icons/extra-help-icon.svg';
 
 import InputGroup from "react-bootstrap/InputGroup";
+import {WorkResult} from "./work/work-result/work-result";
+import {Work} from "./work/work";
 export default function PagesRouting() {
 
     const Layout = () => {
@@ -83,6 +84,7 @@ export default function PagesRouting() {
             <Routes>
                 <Route path='/app' element={<Layout/>}>
                     <Route path='/app/work' element={<Work/>}/>
+                    <Route path='/app/work/result' element={<WorkResult/>}/>
                 </Route>
             </Routes>
         );

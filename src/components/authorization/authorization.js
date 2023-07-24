@@ -13,10 +13,13 @@ import RegistrationVerify from './registration/components/registration-verify/re
 import ForgotPassForm from './forgot-password/components/forgot-pass-form/forgot-pass-form';
 import ForgotPassVerify from './forgot-password/components/forgot-pass-verify/forgot-pass-verify';
 import NewPassword from './forgot-password/components/new-password/new-password';
+import Cookies from "universal-cookie/es6";
 
 
 
 export default function AuthorizationRouter() {
+    const cookies = new Cookies;
+    cookies.remove('bearer');
     const Layout = () => {
         return (
             <>

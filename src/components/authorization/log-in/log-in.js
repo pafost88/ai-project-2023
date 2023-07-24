@@ -8,14 +8,16 @@ import PasswordShow from '../../../assets/icons/password-show.svg';
 import EmailIcon from '../../../assets/icons/email-icon.svg';
 import ArrowRight from '../../../assets/icons/arrow-right-green.svg';
 
-import { Component } from 'react';
+import {Component, createRef} from 'react';
 import axios from "axios";
 import Cookies from "universal-cookie/es6";
+import LoadingBar from "react-top-loading-bar";
 
 
 class LogIn extends Component {
     constructor(props) {
         super(props);
+        this.ref = createRef();
         this.state = {
             disabled: 0,
             passwordShown: false,
@@ -72,6 +74,7 @@ class LogIn extends Component {
     }
 
     logIn(event) {
+        this.ref.current.continuousStart();
         event.preventDefault();
         const data = new FormData(event.target);
         const cookies = new Cookies();
@@ -87,12 +90,13 @@ class LogIn extends Component {
             };
 
             axios.post("http://3.75.93.196:8000/login-user", body).then((response) => {
-                alert("Log In success");
+                this.ref.current.complete();
                 cookies.set('bearer', response.data.access_token, {
                     maxAge: 1800
                 });
                 window.location.href = '/app/work';
             }).catch(function (err){
+                this.ref.current.complete();
                 alert(err);
             });
         }
@@ -101,6 +105,7 @@ class LogIn extends Component {
     render() {
         return (
             <>
+                <LoadingBar color='#28b485' ref={this.ref} />
                 <div className='form-label'>
                     <span className='header-label'>Welcome Back!</span>
                     <span className='label-description'>We are glad to see you again at Businex. Log in to continue.</span>

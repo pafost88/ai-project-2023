@@ -1,4 +1,4 @@
-import {Component} from "react";
+import {Component, createRef, useRef, useState} from "react";
 
 import './work.css';
 import Button from "react-bootstrap/Button";
@@ -8,16 +8,16 @@ import Form from "react-bootstrap/Form";
 import axios from "axios";
 import {baseURL} from "../../../App";
 import Cookies from "universal-cookie/es6";
+import LoadingBar from "react-top-loading-bar";
+import {useNavigate} from "react-router-dom";
 
-class Work extends Component {
-    constructor(props) {
-        super(props);
-        this.generateContentPlan = this.generateContentPlan.bind(this);
-    }
+export function Work() {
+    const ref = useRef(0);
+    const navigate = useNavigate();
+    const [result, setResult] = useState();
 
-
-
-    generateContentPlan(event){
+    const generateContentPlan = (event) => {
+        ref.current.continuousStart();
         event.preventDefault();
         const url = baseURL + '/ai/generate-content-plan';
         const data = new FormData(event.target);
@@ -37,12 +37,23 @@ class Work extends Component {
         };
 
         axios.post(url, body, config).then((response) => {
-            console.log(response);
-        })
+            console.log(response.data.content_plan);
+            ref.current.complete();
+            setResult(response.data.content_plan);
+            navigate('result', {
+                state: {
+                    text: response.data.content_plan
+                }
+            });
+        }).catch(function (err){
+            ref.current.complete();
+            alert(err);
+        });
 
     }
-    render() {
-        return (
+    return (
+        <>
+            <LoadingBar color='#28b485' ref={ref} />
             <div className='content'>
                 <div className='back'>
                     <Button className='back-button' variant='dark'><img src={ArrowLeft} alt=''/>Back</Button>
@@ -58,7 +69,7 @@ class Work extends Component {
                         for you
                     </div>
                 </div>
-                <form data-bs-theme="dark" className='form-content' onSubmit={this.generateContentPlan}>
+                <form data-bs-theme="dark" className='form-content' onSubmit={generateContentPlan}>
                     <div className='business-details'>
                         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                             <Form.Label className='light-label'>Business Details</Form.Label>
@@ -135,10 +146,8 @@ class Work extends Component {
                     </div>
                     <Button variant="success" className='w-25 button-medium-bold generate-btn' type='submit'>Generate Content plan</Button>
                 </form>
-
             </div>
-        );
-    }
-}
+        </>
 
-export default Work;
+    );
+}
