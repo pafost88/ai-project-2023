@@ -12,6 +12,7 @@ import ArrowRight from '../../../../../assets/icons/arrow-right-green.svg';
 import { Component } from 'react';
 import axios from 'axios';
 import { Redirect } from 'react-router-dom'
+import {baseURL} from "../../../../../App";
 
 class RegistrationForm extends Component {
     constructor(props) {
@@ -88,15 +89,14 @@ class RegistrationForm extends Component {
                 "confirm_password": data.get('confirm-password'),
             }
 
-            await axios.post("http://3.75.93.196:8000/users", body).then((response) => {
+            const url = baseURL + '/users'
+
+            await axios.post(url, body).then((response) => {
                 console.log(response.data);
             });
             window.location.href = '/';
 
         }
-
-
-        //const response = await axios.post('http://3.75.93.196:8000/users',);
     }
 
     render() {

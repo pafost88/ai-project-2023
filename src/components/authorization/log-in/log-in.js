@@ -12,6 +12,7 @@ import {Component, createRef} from 'react';
 import axios from "axios";
 import Cookies from "universal-cookie/es6";
 import LoadingBar from "react-top-loading-bar";
+import {baseURL} from "../../../App";
 
 
 class LogIn extends Component {
@@ -89,16 +90,19 @@ class LogIn extends Component {
                 "password": data.get('password'),
             };
 
-            axios.post("http://3.75.93.196:8000/login-user", body).then((response) => {
+            const url = baseURL + '/login-user'
+
+            axios.post(url, body).then((response) => {
                 this.ref.current.complete();
                 cookies.set('bearer', response.data.access_token, {
                     maxAge: 1800
                 });
                 window.location.href = '/app/work';
             }).catch(function (err){
-                this.ref.current.complete();
-                alert(err);
+                debugger;
+                alert(err.response.data.detail);
             });
+            this.ref.current.complete();
         }
     }
 
