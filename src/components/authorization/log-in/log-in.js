@@ -10,6 +10,7 @@ import ArrowRight from '../../../assets/icons/arrow-right-green.svg';
 
 import { Component } from 'react';
 import axios from "axios";
+import Cookies from "universal-cookie/es6";
 
 
 class LogIn extends Component {
@@ -73,6 +74,7 @@ class LogIn extends Component {
     logIn(event) {
         event.preventDefault();
         const data = new FormData(event.target);
+        const cookies = new Cookies();
 
         if (this.validate()) {
             let input = {};
@@ -85,13 +87,13 @@ class LogIn extends Component {
             };
 
             axios.post("http://3.75.93.196:8000/login-user", body).then((response) => {
-                if(response.status === 200){
-                    alert("Log In success")
-                }
-                else {
-                    alert("Credentials bad")
-                }
-                console.log(response);
+                alert("Log In success");
+                cookies.set('bearer', response.data.access_token, {
+                    maxAge: 1800
+                });
+                window.location.href = '/app/work';
+            }).catch(function (err){
+                alert(err);
             });
         }
     }

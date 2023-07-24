@@ -89,7 +89,7 @@ class RegistrationForm extends Component {
             }
 
             await axios.post("http://3.75.93.196:8000/users", body).then((response) => {
-                console.log(response);
+                console.log(response.data);
             });
             window.location.href = '/';
 

@@ -5,24 +5,40 @@ import Button from "react-bootstrap/Button";
 
 import ArrowLeft from '../../../assets/icons/arrow-left-dark.svg';
 import Form from "react-bootstrap/Form";
+import axios from "axios";
+import {baseURL} from "../../../App";
+import Cookies from "universal-cookie/es6";
 
 class Work extends Component {
     constructor(props) {
         super(props);
         this.generateContentPlan = this.generateContentPlan.bind(this);
     }
+
+
+
     generateContentPlan(event){
         event.preventDefault();
+        const url = baseURL + '/ai/generate-content-plan';
         const data = new FormData(event.target);
+        const cookies = new Cookies();
+        const bearer = cookies.get('bearer');
+        const config = {
+            headers: { Authorization: `Bearer ${bearer}`}
+        }
 
         const body = {
-            "business-details": data.get('business-details'),
-            "goal": data.get('goal'),
+            "business_details": data.get('business-details'),
+            "your_goal": data.get('goal'),
             "audience": data.get('audience'),
-            "schedule": data.get('schedule'),
-            "content-wishes": data.get('content-wishes'),
+            "schedule_of_publication": data.get('schedule'),
+            "content_wishes": data.get('content-wishes'),
             "budget": data.get('budget'),
         };
+
+        axios.post(url, body, config).then((response) => {
+            console.log(response);
+        })
 
     }
     render() {

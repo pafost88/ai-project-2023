@@ -17,6 +17,8 @@ import PagesRouting from "./components/pages/pages-routing";
 //import Header from './components/header/Header';
 //import Footer from './components/footer/Footer';
 
+export const baseURL = 'http://3.75.93.196:8000';
+
 
 function App() {
     return (
