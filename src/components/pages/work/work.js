@@ -69,83 +69,85 @@ export function Work() {
                         for you
                     </div>
                 </div>
-                <form data-bs-theme="dark" className='form-content' onSubmit={generateContentPlan}>
-                    <div className='business-details'>
-                        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                            <Form.Label className='light-label'>Business Details</Form.Label>
-                            <Form.Control as='textarea' rows={5}
-                                          name='business-details'
-                                          className='input-background'
-                                          placeholder="Tell us information about your business"
-                                          required
-                            />
-                        </Form.Group>
-                    </div>
-                    <div className='row-inputs'>
-                        <div className='w-50'>
-                            <Form.Group className="mb-3">
-                                <Form.Label className='light-label'>Your Goal</Form.Label>
+                <div className='form-content'>
+                    <form data-bs-theme="dark" onSubmit={generateContentPlan}>
+                        <div className='business-details'>
+                            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                                <Form.Label className='light-label'>Business Details</Form.Label>
                                 <Form.Control as='textarea' rows={5}
-                                              name='goal'
+                                              name='business-details'
                                               className='input-background'
-                                              placeholder="What is your goal?"
+                                              placeholder="Tell us information about your business"
                                               required
                                 />
                             </Form.Group>
                         </div>
-                        <div className='w-50'>
-                            <Form.Group className="mb-3">
-                                <Form.Label className='light-label'>Audience</Form.Label>
-                                <Form.Control as='textarea' rows={5}
-                                              name='audience'
-                                              className='input-background'
-                                              placeholder="Tell us more about your target audience"
-                                              required
-                                />
-                            </Form.Group>
+                        <div className='row-inputs'>
+                            <div className='w-50'>
+                                <Form.Group className="mb-3">
+                                    <Form.Label className='light-label'>Your Goal</Form.Label>
+                                    <Form.Control as='textarea' rows={5}
+                                                  name='goal'
+                                                  className='input-background'
+                                                  placeholder="What is your goal?"
+                                                  required
+                                    />
+                                </Form.Group>
+                            </div>
+                            <div className='w-50'>
+                                <Form.Group className="mb-3">
+                                    <Form.Label className='light-label'>Audience</Form.Label>
+                                    <Form.Control as='textarea' rows={5}
+                                                  name='audience'
+                                                  className='input-background'
+                                                  placeholder="Tell us more about your target audience"
+                                                  required
+                                    />
+                                </Form.Group>
+                            </div>
                         </div>
-                    </div>
-                    <div className='row-inputs'>
-                        <div className='w-50'>
-                            <Form.Group className="mb-3">
-                                <Form.Label className='light-label'>Schedule of publications</Form.Label>
+                        <div className='row-inputs'>
+                            <div className='w-50'>
+                                <Form.Group className="mb-3">
+                                    <Form.Label className='light-label'>Schedule of publications</Form.Label>
+                                    <Form.Control
+                                        type='text'
+                                        name='schedule'
+                                        className='input-background'
+                                        placeholder="Once a week"
+                                        required
+                                    />
+                                </Form.Group>
+                            </div>
+                            <div className='w-50'>
+                                <Form.Group className="mb-3">
+                                    <Form.Label className='light-label'>Content wishes</Form.Label>
+                                    <Form.Control
+                                        type='text'
+                                        name='content-wishes'
+                                        className='input-background'
+                                        placeholder="I want funny stories or serious text, etc..."
+                                        required
+                                    />
+                                </Form.Group>
+                            </div>
+                        </div>
+                        <div className='row-inputs'>
+                            <Form.Group className="mb-3 w-50">
+                                <Form.Label className='light-label'>Budget</Form.Label>
                                 <Form.Control
                                     type='text'
-                                    name='schedule'
+                                    name='budget'
                                     className='input-background'
-                                    placeholder="Once a week"
+                                    placeholder="$500 per week"
                                     required
                                 />
                             </Form.Group>
+                            <div className='w-50'></div>
                         </div>
-                        <div className='w-50'>
-                            <Form.Group className="mb-3">
-                                <Form.Label className='light-label'>Content wishes</Form.Label>
-                                <Form.Control
-                                    type='text'
-                                    name='content-wishes'
-                                    className='input-background'
-                                    placeholder="I want funny stories or serious text, etc..."
-                                    required
-                                />
-                            </Form.Group>
-                        </div>
-                    </div>
-                    <div className='row-inputs'>
-                        <Form.Group className="mb-3 w-50">
-                            <Form.Label className='light-label'>Budget</Form.Label>
-                            <Form.Control
-                                type='text'
-                                name='budget'
-                                className='input-background'
-                                placeholder="$500 per week"
-                                required
-                            />
-                        </Form.Group>
-                        <div className='w-50'></div>
-                    </div>
-                    <Button variant="success" className='w-25 button-medium-bold generate-btn' type='submit'>Generate Content plan</Button>
-                </form>
+                        <Button variant="success" className='w-25 button-medium-bold generate-btn' type='submit'>Generate Content plan</Button>
+                    </form>
+                </div>
             </div>
         </>
 
