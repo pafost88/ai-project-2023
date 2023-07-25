@@ -39,33 +39,23 @@ class LogIn extends Component {
 
     handleChange(event) {
         let input = this.state.input;
+        let errors = {};
         input[event.target.name] = event.target.value;
         this.setState({
             input
         });
         if (event.target.value.length > 7) {
             this.setDisabled(true);
+            errors = {};
         }
         else {
             this.setDisabled(false);
-        }
-    }
-
-    validate() {
-        let input = this.state.input;
-        let errors = {};
-        let isValid = true;
-
-        if (input["password"].length < 8) {
-            isValid = false;
             errors["password"] = 'Password is too short!'
         }
 
         this.setState({
             errors: errors
         });
-
-        return isValid;
     }
 
     setDisabled(isDisabled) {
@@ -75,35 +65,34 @@ class LogIn extends Component {
     }
 
     logIn(event) {
-        this.ref.current.continuousStart();
         event.preventDefault();
+        this.ref.current.continuousStart();
         const data = new FormData(event.target);
         const cookies = new Cookies();
 
-        if (this.validate()) {
-            let input = {};
-            input["password"] = "";
-            this.setState({ input: input });
+        const body = {
+            "email": data.get('email'),
+            "password": data.get('password'),
+        };
 
-            const body = {
-                "email": data.get('email'),
-                "password": data.get('password'),
-            };
+        let input = {};
+        input["password"] = "";
+        this.setState({ input: input });
 
-            const url = baseURL + '/login-user'
 
-            axios.post(url, body).then((response) => {
-                this.ref.current.complete();
-                cookies.set('bearer', response.data.access_token, {
-                    maxAge: 1800
-                });
-                window.location.href = '/app/work';
-            }).catch(function (err){
-                debugger;
-                alert(err.response.data.detail);
-            });
+        const url = baseURL + '/login-user'
+
+        axios.post(url, body).then((response) => {
             this.ref.current.complete();
-        }
+            cookies.set('bearer', response.data.access_token, {
+                maxAge: 1800
+            });
+            window.location.href = '/app/work';
+        }).catch(function (err){
+            alert(err.response?.data.detail);
+            event.stopPropagation();
+        });
+        this.ref.current.complete();
     }
 
     render() {
